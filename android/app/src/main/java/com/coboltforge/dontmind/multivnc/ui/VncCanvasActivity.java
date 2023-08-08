@@ -300,7 +300,7 @@ public class VncCanvasActivity extends Activity implements PopupMenu.OnMenuItemC
 		mousebutton1.init(1, vncCanvas);
 		mousebutton2.init(2, vncCanvas);
 		mousebutton3.init(3, vncCanvas);
-		if(! prefs.getBoolean(Constants.PREFS_KEY_MOUSEBUTTONS, true))
+		if(! prefs.getBoolean(Constants.PREFS_KEY_MOUSEBUTTONS, false))
 			mousebuttons.setVisibility(View.GONE);
 
 		touchpoints = (TouchPointView) findViewById(R.id.touchpoints);
@@ -311,7 +311,7 @@ public class VncCanvasActivity extends Activity implements PopupMenu.OnMenuItemC
 		notificationToast.setGravity(Gravity.TOP, 0, 60);
 
 
-		if(! prefs.getBoolean(Constants.PREFS_KEY_POINTERHIGHLIGHT, true))
+		if(! prefs.getBoolean(Constants.PREFS_KEY_POINTERHIGHLIGHT, false))
 			vncCanvas.setPointerHighlight(false);
 
 
